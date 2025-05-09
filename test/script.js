@@ -142,37 +142,37 @@ const teamMembers = [
             {
                 level: "elementary",
                 degree: "Elementary Education",
-                institution: "St. Mary's Elementary",
-                year: "2012 - 2018",
+                institution: "Suaybaguio Riña Elementary School",
+                year: "2013 - 2014",
                 description: "Excellence in Mathematics and Science, Member of the Science Club"
             },
             {
                 level: "junior",
                 degree: "Junior High School",
-                institution: "St. Mary's High School",
-                year: "2018 - 2022",
+                institution: "Max Mirafuentes Academy",
+                year: "2017 - 2018",
                 description: "Class Representative, Active in Robotics Club"
             },
             {
                 level: "senior",
-                degree: "Senior High School - STEM",
-                institution: "St. Mary's High School",
-                year: "2022 - Present",
+                degree: "Senior High School - ABM",
+                institution: "University of Mindanao Tagum",
+                year: "2019 - 2020",
                 description: "Focus on Computer Programming and Data Analysis"
             },
             {
                 level: "college",
-                degree: "Python Programming Certification",
-                institution: "Online Learning Platform",
-                year: "2023",
+                degree: "Bachelor of Science in Computer Science",
+                institution: "University of Mindanao Tagum",
+                year: "2023 - present",
                 description: "Advanced Python programming and data analysis techniques"
             }
         ],
         projects: [
             {
-                title: "Student Attendance System",
-                description: "Developed an automated system to track and report student attendance.",
-                technologies: ["Python", "SQLite", "HTML/CSS"]
+                title: "Arté Booking System",
+                description: "A streamlined web-based platform that allows users to schedule, manage, and track service appointments with ease—designed for efficiency, real-time updates, and user convenience.",
+                technologies: ["PHP", "MySQL", "HTML/CSS"]
             },
             {
                 title: "Weather Data Analyzer",
@@ -181,9 +181,9 @@ const teamMembers = [
             }
         ],
         contact: {
-            email: "jayvien@example.com",
-            github: "github.com/jayvienm",
-            twitter: "twitter.com/jayvienm"
+            email: "jayvienmocallay7@gmail.com",
+            github: "github.com/pasta-lover69",
+            twitter: "https://x.com/jebcasia"
         }
     },
     {
