@@ -128,15 +128,15 @@ const teamMembers = [
         id: 3,
         name: "Jayvien Mocallay",
         title: "Team Member",
-        image: "assets/img/Untitled.png",
-        bio: "I'm passionate about programming and problem-solving. I enjoy working on challenging projects that require logical thinking and creativity. My goal is to develop applications that can make a positive impact on people's lives.",
-        skills: ["Python", "JavaScript", "Data Analysis", "Problem Solving", "Algorithms"],
+        image: "assets/img/jeb.jpg",
+        bio: "Aspiring cybersecurity analyst and passionate programmer, committed to excellence as a student at the University of Mindanao and to building secure, innovative digital solutions.",
+        skills: ["Python", "JavaScript", "Cybeersecurity Analysis", "Problem Solving", "Algorithms"],
         education: [
             {
                 level: "preschool",
                 degree: "Early Childhood Education",
-                institution: "Sunshine Kids Preschool",
-                year: "2010 - 2012",
+                institution: "Divine Mercy School of Tagum",
+                year: "2007 - 2008",
                 description: "Early foundation in learning through play and social interaction"
             },
             {
