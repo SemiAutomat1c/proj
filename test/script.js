@@ -4,7 +4,7 @@ const teamMembers = [
         id: 1,
         name: "Ryan Christian Deniega",
         title: "Team Member",
-        image: "https://via.placeholder.com/400x400.png?text=Alex",
+        image: "assets/img/Ryan.png",
         bio: "I'm a student with a passion for web development and design. I enjoy creating user-friendly interfaces and learning new technologies. In my free time, I like to work on personal coding projects and contribute to open-source.",
         skills: ["HTML", "CSS", "JavaScript", "Photoshop", "UI Design"],
         education: [
@@ -66,7 +66,7 @@ const teamMembers = [
         id: 2,
         name: "Kyndel Roy Suarez",
         title: "Team Member",
-        image: "https://via.placeholder.com/400x400.png?text=Sarah",
+        image: "assets/img/roy.jpg",
         bio: "I'm interested in graphic design and digital art. I enjoy creating visually appealing content and have a keen eye for detail. I'm currently exploring UI/UX design principles and how they can enhance user experience.",
         skills: ["Graphic Design", "Illustration", "Photoshop", "Illustrator", "UI/UX"],
         education: [
@@ -128,7 +128,7 @@ const teamMembers = [
         id: 3,
         name: "Jayvien Mocallay",
         title: "Team Member",
-        image: "https://via.placeholder.com/400x400.png?text=Michael",
+        image: "assets/img/Untitled.png",
         bio: "I'm passionate about programming and problem-solving. I enjoy working on challenging projects that require logical thinking and creativity. My goal is to develop applications that can make a positive impact on people's lives.",
         skills: ["Python", "JavaScript", "Data Analysis", "Problem Solving", "Algorithms"],
         education: [
@@ -190,7 +190,7 @@ const teamMembers = [
         id: 4,
         name: "Kristina Nina Nillas",
         title: "Team Member",
-        image: "https://via.placeholder.com/400x400.png?text=Jessica",
+        image: "assets/img/Nina.jpg",
         bio: "I'm interested in digital media and content creation. I enjoy writing, editing, and producing multimedia content. I believe in the power of storytelling and how it can be used to educate and inspire others.",
         skills: ["Content Writing", "Video Editing", "Social Media", "Photography", "Storytelling"],
         education: [
