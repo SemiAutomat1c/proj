@@ -188,7 +188,7 @@ const teamMembers = [
     },
     {
         id: 4,
-        name: "Kristina Nina Nillas",
+        name: "Nina Kristina Nillas",
         title: "Team Member",
         image: "assets/img/Nina.jpg",
         bio: "I'm interested in digital media and content creation. I enjoy writing, editing, and producing multimedia content. I believe in the power of storytelling and how it can be used to educate and inspire others.",
