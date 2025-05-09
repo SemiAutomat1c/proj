@@ -17,6 +17,7 @@ A responsive and interactive team portfolio website for the CS15 Web Design & De
 - **Ryan Christian Deniega** - Web Developer & UI Designer
 - **Kyndel Roy Suarez** - Graphic Designer & Digital Artist
 - **Jayvien Mocallay** - Cybersecurity Specialist & Programmer
+- **Nina Kristina Nillas** - Digital Content Creator & Media Specialist
 
 ## Technologies Used
 
