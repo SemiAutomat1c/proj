@@ -170,7 +170,11 @@ const teamMembers = [
         name: "Jayvien Mocallay",
         title: "Cybersecurity Specialist & Programmer",
         image: "assets/img/jeb.jpg",
-        bio: "My fascination with computer security began at age 14 when I successfully recovered data from my family's virus-infected computer. Born in Tagum City and raised in a family that valued education, I always had a curious mind about how things work, especially technology. During my time at Max Mirafuentes Academy, I was known as the go-to person for solving computer issues. After completing my ABM program at University of Mindanao Tagum, I decided to pursue Computer Science to follow my true passion. Currently, I'm focused on cybersecurity and backend development, with a particular interest in creating secure systems and applications. I've participated in several online coding competitions and cybersecurity challenges to sharpen my skills. I enjoy the problem-solving aspects of programming and the constant learning that comes with staying updated on new security threats and solutions. When I'm not studying or coding, I volunteer with a local tech club where we teach basic programming to high school students. I believe that digital security education is essential in today's interconnected world, which drives my career goals.",
+        bio: `My fascination with tech started young—by age 6, I was already mastering Snake and Sudoku on my dad’s legendary Nokia 3310. Fast forward a few years, and you’d usually find me cutting class to play online games in computer cafés, unknowingly kickstarting my future in tech one respawn at a time.
+
+            Born in Tagum City and raised in a family that treated education like gold, I was always curious about how things worked (especially if they had screens and buttons). At Max Mirafuentes Academy, I spent more time in front of a monitor than a whiteboard, but hey—at least I picked up some actual skills.
+
+            After pushing through the ABM program at the University of Mindanao Tagum, I realized that business math wasn’t really my thing—cybersecurity and backend development were. Now I’m obsessed with creating secure systems, solving complex bugs, and occasionally yelling at my terminal like it’s a teammate who forgot to heal.`,
         skills: ["Python", "JavaScript", "Cybersecurity Analysis", "Problem Solving", "Algorithms"],
         interests: [
             "Cybersecurity and network defense",
@@ -185,42 +189,42 @@ const teamMembers = [
             "Contribute to the field of computer security research",
             "Start a company focused on digital security solutions"
         ],
-        quote: "Security isn't something you buy, it's something you practice. I'm dedicated to creating a safer digital environment through code and education.",
+        quote: "It's not a bug, it's a feature. Aiming to be the best in cybersecurity and programming. Ano? Bakit ng ba? You tell me, Damn it.",
         education: [
             {
                 level: "preschool",
                 degree: "Early Childhood Education",
                 institution: "Divine Mercy School of Tagum",
                 year: "2007 - 2008",
-                description: "Early foundation in learning through play and social interaction"
+                description: "A preschooler who already knows how to write in cursive"
             },
             {
                 level: "elementary",
                 degree: "Elementary Education",
                 institution: "Suaybaguio Riña Elementary School",
                 year: "2013 - 2014",
-                description: "Excellence in Mathematics and Science, Member of the Science Club"
+                description: "Giving the math teacher they always wanted, but never got"
             },
             {
                 level: "junior",
                 degree: "Junior High School",
                 institution: "Max Mirafuentes Academy",
-                year: "2017 - 2018",
-                description: "Class Representative, Active in Robotics Club"
+                year: "2014 - 2018",
+                description: "Where the real fun begins, and the bad habits occurs"
             },
             {
                 level: "senior",
                 degree: "Senior High School - ABM",
                 institution: "University of Mindanao Tagum",
-                year: "2019 - 2020",
-                description: "Focus on Computer Programming and Data Analysis"
+                year: "2018 - 2020",
+                description: "Me in ABM class: debit 1,000,000 credit 1,000,001. Ano??"
             },
             {
                 level: "college",
                 degree: "Bachelor of Science in Computer Science",
                 institution: "University of Mindanao Tagum",
                 year: "2023 - present",
-                description: "Advanced Python programming and data analysis techniques"
+                description: "Where I learned that the best teachers are Indians and AI"
             }
         ],
         projects: [
@@ -228,19 +232,23 @@ const teamMembers = [
                 title: "Arté Booking System",
                 description: "A streamlined web-based platform that allows users to schedule, manage, and track service appointments with ease—designed for efficiency, real-time updates, and user convenience.",
                 technologies: ["PHP", "MySQL", "HTML/CSS"],
-                github: "https://github.com/pasta-lover69/arte-booking"
+                preview: "assets/img/projects/Arte_web.png",
+                github: "https://github.com/pasta-lover69/Arte_project"
             },
             {
-                title: "Weather Data Analyzer",
-                description: "Application that collects and visualizes local weather patterns.",
-                technologies: ["Python", "Data Visualization", "APIs"],
-                github: "https://github.com/pasta-lover69/weather-analyzer"
+                title: "Ruby Projects",
+                description: "Currently Learning Ruby to be more widely know the concept of each programming langguages. And soon to learn the framework of each programming language.",
+                technologies: ["Ruby"],
+                preview: "assets/img/projects/rb.png",
+                github: "https://github.com/pasta-lover69/Ruby-Projects"
             }
         ],
         contact: {
             email: "jayvienmocallay7@gmail.com",
             github: "github.com/pasta-lover69",
-            twitter: "https://x.com/jebcasia"
+            Twitter: "x.com/jebcasia",
+            Instagram: "instagram.com/jebcasia",
+            Facebook: "facebook.com/jeb.casia"
         }
     },
     {
