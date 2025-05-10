@@ -141,7 +141,7 @@ const teamMembers = [
             },
             {
                 level: "college",
-                degree: "Digital Illustration Certification",
+                degree: "BS in Computer Science",
                 institution: "Community Art Center",
                 year: "2023",
                 description: "Advanced techniques in digital illustration and design"
@@ -170,11 +170,11 @@ const teamMembers = [
         name: "Jayvien Mocallay",
         title: "Cybersecurity Specialist & Programmer",
         image: "assets/img/jeb.jpg",
-        bio: `My fascination with tech started young—by age 6, I was already mastering Snake and Sudoku on my dad’s legendary Nokia 3310. Fast forward a few years, and you’d usually find me cutting class to play online games in computer cafés, unknowingly kickstarting my future in tech one respawn at a time.
+        bio: `My fascination with tech started young—by age 6, I was already mastering Snake and Sudoku on my dad's legendary Nokia 3310. Fast forward a few years, and you'd usually find me cutting class to play online games in computer cafés, unknowingly kickstarting my future in tech one respawn at a time.
 
             Born in Tagum City and raised in a family that treated education like gold, I was always curious about how things worked (especially if they had screens and buttons). At Max Mirafuentes Academy, I spent more time in front of a monitor than a whiteboard, but hey—at least I picked up some actual skills.
 
-            After pushing through the ABM program at the University of Mindanao Tagum, I realized that business math wasn’t really my thing—cybersecurity and backend development were. Now I’m obsessed with creating secure systems, solving complex bugs, and occasionally yelling at my terminal like it’s a teammate who forgot to heal.`,
+            After pushing through the ABM program at the University of Mindanao Tagum, I realized that business math wasn't really my thing—cybersecurity and backend development were. Now I'm obsessed with creating secure systems, solving complex bugs, and occasionally yelling at my terminal like it's a teammate who forgot to heal.`,
         skills: ["Python", "JavaScript", "Cybersecurity Analysis", "Problem Solving", "Algorithms"],
         interests: [
             "Cybersecurity and network defense",
@@ -221,7 +221,7 @@ const teamMembers = [
             },
             {
                 level: "college",
-                degree: "Bachelor of Science in Computer Science",
+                degree: "BS in Computer Science",
                 institution: "University of Mindanao Tagum",
                 year: "2023 - present",
                 description: "Where I learned that the best teachers are Indians and AI"
@@ -303,7 +303,7 @@ const teamMembers = [
             },
             {
                 level: "college",
-                degree: "Digital Storytelling Workshop",
+                degree: "BS in Computer Science",
                 institution: "Youth Media Center",
                 year: "2023",
                 description: "Advanced techniques in digital storytelling and multimedia production"
@@ -601,56 +601,154 @@ document.addEventListener('DOMContentLoaded', function() {
         educationContent.setAttribute('aria-labelledby', `tab-education-${member.id}`);
         educationContent.setAttribute('hidden', '');
 
-        // Create timeline container
-        const timelineContainer = document.createElement('div');
-        timelineContainer.className = 'education-timeline';
+        // Create education timeline
+        const educationTimeline = document.createElement('div');
+        educationTimeline.className = 'education-timeline';
         
-        // Add timeline line
+        // Add an educational journey title with icon
+        const educationJourneyTitle = document.createElement('div');
+        educationJourneyTitle.className = 'education-journey-title';
+        educationJourneyTitle.innerHTML = `
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Educational Journey</h3>
+        `;
+        educationContent.appendChild(educationJourneyTitle);
+        
         const timelineLine = document.createElement('div');
         timelineLine.className = 'timeline-line';
-        timelineContainer.appendChild(timelineLine);
+        educationTimeline.appendChild(timelineLine);
 
-        // Add education items
+        if (member.education && member.education.length > 0) {
         member.education.forEach(edu => {
-            const eduItem = document.createElement('div');
-            eduItem.className = 'education-item';
+                const educationItem = document.createElement('div');
+                educationItem.className = `education-item level-${edu.level}`;
 
-            // Education level badge
-            const levelBadge = document.createElement('span');
+                // Add education level badge with better styling
+                const levelBadge = document.createElement('div');
             levelBadge.className = `education-level level-${edu.level}`;
-            levelBadge.textContent = edu.level.charAt(0).toUpperCase() + edu.level.slice(1);
-
-            // Degree
+                
+                // Choose appropriate icon based on level
+                let levelIcon = '';
+                switch(edu.level) {
+                    case 'preschool':
+                        levelIcon = 'fa-child';
+                        break;
+                    case 'elementary':
+                        levelIcon = 'fa-book';
+                        break;
+                    case 'junior':
+                        levelIcon = 'fa-pencil-alt';
+                        break;
+                    case 'senior':
+                        levelIcon = 'fa-user-graduate';
+                        break;
+                    case 'college':
+                        levelIcon = 'fa-university';
+                        break;
+                    default:
+                        levelIcon = 'fa-book';
+                }
+                
+                levelBadge.innerHTML = `<i class="fas ${levelIcon}"></i> ${edu.level.charAt(0).toUpperCase() + edu.level.slice(1)}`;
+                educationItem.appendChild(levelBadge);
+                
+                // Degree header with icon
+                const degreeContainer = document.createElement('div');
+                degreeContainer.className = 'degree-container';
+                
+                const degreeIcon = document.createElement('span');
+                degreeIcon.className = 'degree-icon';
+                degreeIcon.innerHTML = '<i class="fas fa-award"></i>';
+                
             const degree = document.createElement('h3');
             degree.className = 'education-degree';
             degree.textContent = edu.degree;
 
-            // School
-            const school = document.createElement('p');
+                degreeContainer.appendChild(degreeIcon);
+                degreeContainer.appendChild(degree);
+                educationItem.appendChild(degreeContainer);
+                
+                // School with icon
+                const schoolContainer = document.createElement('div');
+                schoolContainer.className = 'school-container';
+                
+                const schoolIcon = document.createElement('span');
+                schoolIcon.className = 'school-icon';
+                schoolIcon.innerHTML = '<i class="fas fa-school"></i>';
+                
+                const school = document.createElement('div');
             school.className = 'education-school';
             school.textContent = edu.institution;
 
-            // Year
-            const year = document.createElement('p');
+                schoolContainer.appendChild(schoolIcon);
+                schoolContainer.appendChild(school);
+                educationItem.appendChild(schoolContainer);
+                
+                // Year with icon
+                const yearContainer = document.createElement('div');
+                yearContainer.className = 'year-container';
+                
+                const yearIcon = document.createElement('span');
+                yearIcon.className = 'year-icon';
+                yearIcon.innerHTML = '<i class="fas fa-calendar-alt"></i>';
+                
+                const year = document.createElement('div');
             year.className = 'education-year';
             year.textContent = edu.year;
 
-            // Description
+                yearContainer.appendChild(yearIcon);
+                yearContainer.appendChild(year);
+                educationItem.appendChild(yearContainer);
+                
+                // Description with improved styling
+                const descriptionContainer = document.createElement('div');
+                descriptionContainer.className = 'description-container';
+                
+                const descriptionIcon = document.createElement('span');
+                descriptionIcon.className = 'description-icon';
+                descriptionIcon.innerHTML = '<i class="fas fa-quote-left"></i>';
+                
             const description = document.createElement('p');
             description.className = 'education-description';
             description.textContent = edu.description;
 
-            // Append all elements
-            eduItem.appendChild(levelBadge);
-            eduItem.appendChild(degree);
-            eduItem.appendChild(school);
-            eduItem.appendChild(year);
-            eduItem.appendChild(description);
-
-            timelineContainer.appendChild(eduItem);
-        });
-
-        educationContent.appendChild(timelineContainer);
+                descriptionContainer.appendChild(descriptionIcon);
+                descriptionContainer.appendChild(description);
+                educationItem.appendChild(descriptionContainer);
+                
+                // Add achievements if available
+                if (edu.achievements) {
+                    const achievementsContainer = document.createElement('div');
+                    achievementsContainer.className = 'achievements-container';
+                    
+                    const achievementsTitle = document.createElement('h4');
+                    achievementsTitle.className = 'achievements-title';
+                    achievementsTitle.innerHTML = '<i class="fas fa-trophy"></i> Key Achievements';
+                    achievementsContainer.appendChild(achievementsTitle);
+                    
+                    const achievementsList = document.createElement('ul');
+                    achievementsList.className = 'achievements-list';
+                    
+                    edu.achievements.forEach(achievement => {
+                        const achievementItem = document.createElement('li');
+                        achievementItem.textContent = achievement;
+                        achievementsList.appendChild(achievementItem);
+                    });
+                    
+                    achievementsContainer.appendChild(achievementsList);
+                    educationItem.appendChild(achievementsContainer);
+                }
+                
+                educationTimeline.appendChild(educationItem);
+            });
+        } else {
+            const noEducation = document.createElement('p');
+            noEducation.className = 'no-content-message';
+            noEducation.textContent = 'No education history available.';
+            educationTimeline.appendChild(noEducation);
+        }
+        
+        educationContent.appendChild(educationTimeline);
         
         // Projects tab content
         const projectsContent = document.createElement('div');
@@ -661,96 +759,20 @@ document.addEventListener('DOMContentLoaded', function() {
         projectsContent.setAttribute('aria-labelledby', `tab-projects-${member.id}`);
         projectsContent.setAttribute('hidden', '');
         
-        const projectsGrid = document.createElement('div');
-        projectsGrid.className = 'projects-grid';
+        if (member.projects && member.projects.length > 0) {
+            // Use the new createProjectCards function to generate project cards
+            projectsContent.appendChild(createProjectCards(member.projects));
+        } else {
+            const noProjects = document.createElement('p');
+            noProjects.className = 'no-content-message';
+            noProjects.textContent = 'No projects available.';
+            projectsContent.appendChild(noProjects);
+        }
         
-        member.projects.forEach(project => {
-            const projectCard = document.createElement('div');
-            projectCard.className = 'project-card';
-            
-            // Add project preview image if available
-            if (project.preview) {
-                const projectPreview = document.createElement('div');
-                projectPreview.className = 'project-preview';
-                
-                const img = document.createElement('img');
-                img.src = project.preview;
-                img.alt = `${project.title} Preview`;
-                img.className = 'project-image';
-                
-                projectPreview.appendChild(img);
-                projectCard.appendChild(projectPreview);
-            } else {
-                // Create a code snippet preview as fallback
-                const codeSnippet = document.createElement('div');
-                codeSnippet.className = 'code-snippet';
-                codeSnippet.innerHTML = `<pre><code>// ${project.title} 
-// A project using ${project.technologies.join(', ')}
-
-function initializeProject() {
-  console.log("Starting ${project.title}...");
-  // Main functionality
-  return true;
-}</code></pre>`;
-                
-                projectCard.appendChild(codeSnippet);
-            }
-            
-            // Create project header with title and GitHub link
-            const projectHeader = document.createElement('div');
-            projectHeader.className = 'project-header';
-            
-            const projectTitle = document.createElement('h3');
-            projectTitle.className = 'project-title';
-            projectTitle.textContent = project.title;
-            
-            projectHeader.appendChild(projectTitle);
-            
-            // Add GitHub icon with link if github property exists
-            if (project.github) {
-                const githubLink = document.createElement('a');
-                githubLink.href = project.github;
-                githubLink.className = 'github-link';
-                githubLink.target = '_blank';
-                githubLink.rel = 'noopener noreferrer';
-                githubLink.setAttribute('aria-label', `GitHub repository for ${project.title}`);
-                githubLink.title = "View GitHub Repository";
-                
-                const githubIcon = document.createElement('i');
-                githubIcon.className = 'fab fa-github';
-                
-                githubLink.appendChild(githubIcon);
-                projectHeader.appendChild(githubLink);
-            }
-            
-            projectCard.appendChild(projectHeader);
-            
-            const projectDesc = document.createElement('p');
-            projectDesc.className = 'project-description';
-            projectDesc.textContent = project.description;
-            
-            const projectTech = document.createElement('div');
-            projectTech.className = 'project-tech';
-            
-            project.technologies.forEach(tech => {
-                const techTag = document.createElement('span');
-                techTag.className = 'tech-tag';
-                techTag.textContent = tech;
-                projectTech.appendChild(techTag);
-            });
-            
-            projectCard.appendChild(projectDesc);
-            projectCard.appendChild(projectTech);
-            
-            projectsGrid.appendChild(projectCard);
-        });
-        
-        projectsContent.appendChild(projectsGrid);
-        
-        // Contact tab content
+        // Contact tab content - using the dedicated function
         const contactContent = createContactContent(member);
         
-        // Add all tab contents
+        // Add all tab content sections to tab contents container
         tabContents.appendChild(aboutContent);
         tabContents.appendChild(educationContent);
         tabContents.appendChild(projectsContent);
@@ -759,7 +781,7 @@ function initializeProject() {
         return tabContents;
     }
 
-    // Create Contact content section
+    // Create contact information content
     function createContactContent(member) {
         const contactContent = document.createElement('div');
         contactContent.className = 'tab-content';
@@ -769,100 +791,212 @@ function initializeProject() {
         contactContent.setAttribute('aria-labelledby', `tab-contact-${member.id}`);
         contactContent.setAttribute('hidden', '');
         
-        // Create section title
-        const sectionTitle = document.createElement('div');
-        sectionTitle.className = 'contact-section-title';
+        // Contact container
+        const contactContainer = document.createElement('div');
+        contactContainer.className = 'contact-content';
         
-        const titleIcon = document.createElement('i');
-        titleIcon.className = 'fas fa-address-card';
-        
-        const titleText = document.createElement('h3');
-        titleText.textContent = 'Connect With Me';
-        
-        sectionTitle.appendChild(titleIcon);
-        sectionTitle.appendChild(titleText);
-        
-        contactContent.appendChild(sectionTitle);
-        
+        // Contact information list
         const contactInfo = document.createElement('div');
         contactInfo.className = 'contact-info';
         
-        // Create contact items
-        for (const [key, value] of Object.entries(member.contact)) {
-            const contactItem = document.createElement('div');
-            contactItem.className = 'contact-item';
-            
-            // Icon based on contact type
-            const icon = document.createElement('span');
-            icon.className = `contact-icon ${key.toLowerCase()}`; // Add platform-specific class
-            
-            // Use Font Awesome icons
-            switch(key.toLowerCase()) {
+        // Contact section title
+        const contactSectionTitle = document.createElement('div');
+        contactSectionTitle.className = 'contact-section-title';
+        contactSectionTitle.innerHTML = `
+            <i class="fas fa-address-card"></i>
+            <h3>Contact Information</h3>
+        `;
+        contactInfo.appendChild(contactSectionTitle);
+        
+        // Create each contact item
+        if (member.contact) {
+            Object.entries(member.contact).forEach(([platform, link]) => {
+                let icon;
+                switch (platform.toLowerCase()) {
                 case 'email':
-                    icon.innerHTML = '<i class="fas fa-envelope"></i>';
+                        icon = 'fa-envelope';
                     break;
                 case 'github':
-                    icon.innerHTML = '<i class="fab fa-github"></i>';
-                    break;
-                case 'linkedin':
-                    icon.innerHTML = '<i class="fab fa-linkedin"></i>';
+                        icon = 'fa-github';
                     break;
                 case 'twitter':
-                    icon.innerHTML = '<i class="fab fa-twitter"></i>';
+                        icon = 'fa-twitter';
                     break;
-                case 'instagram':
-                    icon.innerHTML = '<i class="fab fa-instagram"></i>';
-                    break;
-                case 'facebook':
-                    icon.innerHTML = '<i class="fab fa-facebook-f"></i>';
+                    case 'linkedin':
+                        icon = 'fa-linkedin';
                     break;
                 case 'portfolio':
-                    icon.innerHTML = '<i class="fas fa-globe"></i>';
+                        icon = 'fa-globe';
                     break;
-                case 'youtube':
-                    icon.innerHTML = '<i class="fab fa-youtube"></i>';
+                    case 'facebook':
+                        icon = 'fa-facebook';
+                        break;
+                    case 'instagram':
+                        icon = 'fa-instagram';
                     break;
                 default:
-                    icon.innerHTML = '<i class="fas fa-link"></i>';
-            }
-            
-            // Create link container
-            const linkContainer = document.createElement('div');
-            linkContainer.className = 'contact-link-container';
-            
-            // Create link label (platform name)
-            const linkLabel = document.createElement('span');
-            linkLabel.className = 'contact-platform';
-            linkLabel.textContent = key.charAt(0).toUpperCase() + key.slice(1);
-            
-            // Create link
-            const link = document.createElement('a');
-            link.className = 'contact-link';
-            
-            // Format link based on type
-            if (key.toLowerCase() === 'email') {
-                link.href = `mailto:${value}`;
+                        icon = 'fa-link';
+                }
+                
+                const contactItem = document.createElement('div');
+                contactItem.className = 'contact-item';
+                
+                const contactIcon = document.createElement('div');
+                contactIcon.className = `contact-icon ${platform.toLowerCase()}`;
+                contactIcon.innerHTML = `<i class="fab ${icon}"></i>`;
+                
+                const contactLinkContainer = document.createElement('div');
+                contactLinkContainer.className = 'contact-link-container';
+                
+                const contactPlatform = document.createElement('div');
+                contactPlatform.className = 'contact-platform';
+                contactPlatform.textContent = platform;
+                
+                const contactLink = document.createElement('a');
+                contactLink.className = 'contact-link';
+                contactLink.textContent = link;
+                
+                if (platform.toLowerCase() === 'email') {
+                    contactLink.href = `mailto:${link}`;
             } else {
-                link.href = value.startsWith('http') ? value : `https://${value}`;
+                    contactLink.href = link.startsWith('http') ? link : `https://${link}`;
+                    contactLink.target = '_blank';
+                    contactLink.rel = 'noopener noreferrer';
             }
             
-            link.target = '_blank';
-            link.rel = 'noopener noreferrer';
-            link.textContent = value;
+                contactLinkContainer.appendChild(contactPlatform);
+                contactLinkContainer.appendChild(contactLink);
             
-            // Add label and link to container
-            linkContainer.appendChild(linkLabel);
-            linkContainer.appendChild(link);
+                contactItem.appendChild(contactIcon);
+                contactItem.appendChild(contactLinkContainer);
             
-            // Add icon and link container to contact item
-            contactItem.appendChild(icon);
-            contactItem.appendChild(linkContainer);
-            
-            // Add contact item to contact info
             contactInfo.appendChild(contactItem);
+            });
         }
         
-        contactContent.appendChild(contactInfo);
+        contactContainer.appendChild(contactInfo);
+        
+        // Add contact form
+        const contactForm = document.createElement('div');
+        contactForm.className = 'contact-form-container';
+        
+        // Contact form title
+        const formTitle = document.createElement('div');
+        formTitle.className = 'contact-section-title';
+        formTitle.innerHTML = `
+            <i class="fas fa-paper-plane"></i>
+            <h3>Send a Message</h3>
+        `;
+        
+        // Create form
+        const form = document.createElement('form');
+        form.className = 'contact-form';
+        form.setAttribute('action', '#'); // In a real app, set to proper form handler
+        form.setAttribute('method', 'post');
+        
+        // Name input
+        const nameGroup = document.createElement('div');
+        nameGroup.className = 'form-group';
+        
+        const nameLabel = document.createElement('label');
+        nameLabel.setAttribute('for', `name-${member.id}`);
+        nameLabel.textContent = 'Your Name';
+        
+        const nameInput = document.createElement('input');
+        nameInput.setAttribute('type', 'text');
+        nameInput.setAttribute('id', `name-${member.id}`);
+        nameInput.setAttribute('name', 'name');
+        nameInput.setAttribute('placeholder', 'Enter your name');
+        nameInput.required = true;
+        
+        nameGroup.appendChild(nameLabel);
+        nameGroup.appendChild(nameInput);
+        
+        // Email input
+        const emailGroup = document.createElement('div');
+        emailGroup.className = 'form-group';
+        
+        const emailLabel = document.createElement('label');
+        emailLabel.setAttribute('for', `email-${member.id}`);
+        emailLabel.textContent = 'Your Email';
+        
+        const emailInput = document.createElement('input');
+        emailInput.setAttribute('type', 'email');
+        emailInput.setAttribute('id', `email-${member.id}`);
+        emailInput.setAttribute('name', 'email');
+        emailInput.setAttribute('placeholder', 'Enter your email');
+        emailInput.required = true;
+        
+        emailGroup.appendChild(emailLabel);
+        emailGroup.appendChild(emailInput);
+        
+        // Message textarea
+        const messageGroup = document.createElement('div');
+        messageGroup.className = 'form-group';
+        
+        const messageLabel = document.createElement('label');
+        messageLabel.setAttribute('for', `message-${member.id}`);
+        messageLabel.textContent = 'Message';
+        
+        const messageTextarea = document.createElement('textarea');
+        messageTextarea.setAttribute('id', `message-${member.id}`);
+        messageTextarea.setAttribute('name', 'message');
+        messageTextarea.setAttribute('placeholder', 'Enter your message');
+        messageTextarea.setAttribute('rows', '5');
+        messageTextarea.required = true;
+        
+        messageGroup.appendChild(messageLabel);
+        messageGroup.appendChild(messageTextarea);
+        
+        // Submit button
+        const submitBtn = document.createElement('button');
+        submitBtn.setAttribute('type', 'submit');
+        submitBtn.className = 'submit-button';
+        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+        
+        // Add event listener for form submission (demo only)
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show a success message (in real app, would send the form data)
+            const formSuccess = document.createElement('div');
+            formSuccess.className = 'form-success';
+            formSuccess.innerHTML = `
+                <i class="fas fa-check-circle"></i>
+                <p>Message sent successfully! (Demo only)</p>
+            `;
+            
+            // Replace form with success message
+            form.innerHTML = '';
+            form.appendChild(formSuccess);
+            
+            // Reset form after 3 seconds in this demo
+            setTimeout(() => {
+                form.reset();
+                form.innerHTML = '';
+                form.appendChild(nameGroup);
+                form.appendChild(emailGroup);
+                form.appendChild(messageGroup);
+                form.appendChild(submitBtn);
+            }, 3000);
+        });
+        
+        // Assemble form
+        form.appendChild(nameGroup);
+        form.appendChild(emailGroup);
+        form.appendChild(messageGroup);
+        form.appendChild(submitBtn);
+        
+        // Add form to container
+        contactForm.appendChild(formTitle);
+        contactForm.appendChild(form);
+        
+        // Add form container to contact content
+        contactContainer.appendChild(contactForm);
+        
+        // Add container to tab content
+        contactContent.appendChild(contactContainer);
+        
         return contactContent;
     }
     
@@ -899,7 +1033,7 @@ function initializeProject() {
                     newMember.classList.remove('fade-in');
                 }, 500);
             }, 300);
-        } else {
+            } else {
             // No current active member, just show the new one with fade-in
             newMember.classList.add('active', 'fade-in');
             
@@ -997,43 +1131,82 @@ function initializeProject() {
     // Animate education items
     function animateEducationItems(container) {
         const items = container.querySelectorAll('.education-item');
+        const journeyTitle = container.parentNode.querySelector('.education-journey-title');
+        
+        // Animate the title first
+        if (journeyTitle) {
+            journeyTitle.style.opacity = '0';
+            journeyTitle.style.transform = 'translateY(-20px)';
+            
+            // Force reflow
+            journeyTitle.offsetHeight;
+            
+            journeyTitle.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            journeyTitle.style.opacity = '1';
+            journeyTitle.style.transform = 'translateY(0)';
+        }
         
         // Reset all items first
         items.forEach(item => {
             item.style.opacity = '0';
             item.style.transform = 'translateY(30px)';
             item.style.transition = 'none';
+            item.classList.remove('animate-hover');
+            
+            // Reset internal elements too
+            const elements = item.querySelectorAll('.education-level, .degree-container, .school-container, .year-container, .description-container, .achievements-container');
+            elements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(15px)';
+                el.style.transition = 'none';
+            });
         });
         
         // Force reflow to ensure transitions work
         container.offsetHeight;
         
-        // Animate items with staggered delay
-        items.forEach((item, index) => {
-            // Different animation for odd vs even items for timeline effect
-            if (index % 2 === 0) {
-                item.style.transform = 'translateX(-30px)';
-            } else {
-                item.style.transform = 'translateX(30px)';
-            }
-            
-            setTimeout(() => {
-                item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                item.style.opacity = '1';
-                item.style.transform = 'translate(0, 0)';
-            }, 150 * index); // Staggered delay based on item index
-        });
-        
-        // Animate the timeline line
+        // Animate timeline line with a slight delay
         const timelineLine = container.querySelector('.timeline-line');
         if (timelineLine) {
             timelineLine.style.height = '0';
-            timelineLine.style.transition = 'height 1.2s ease';
+            timelineLine.style.transition = 'height 1.5s ease';
             
             setTimeout(() => {
                 timelineLine.style.height = '100%';
             }, 300);
         }
+        
+        // Animate items with staggered delay
+        items.forEach((item, index) => {
+            // Different animation for odd vs even items for timeline effect
+            if (index % 2 === 0) {
+                item.style.transform = 'translateX(-50px) rotate(-1deg)';
+            } else {
+                item.style.transform = 'translateX(50px) rotate(1deg)';
+            }
+            
+            setTimeout(() => {
+                item.style.transition = 'opacity 0.7s ease, transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                item.style.opacity = '1';
+                item.style.transform = 'translate(0, 0) rotate(0)';
+                
+                // Animate internal elements with cascade effect
+                const elements = item.querySelectorAll('.education-level, .degree-container, .school-container, .year-container, .description-container, .achievements-container');
+                elements.forEach((el, elIndex) => {
+                    setTimeout(() => {
+                        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                        el.style.opacity = '1';
+                        el.style.transform = 'translateY(0)';
+                    }, 100 + (elIndex * 70)); // Cascade effect with 70ms intervals
+                });
+                
+                // Add animate-hover class after all animations are complete
+                setTimeout(() => {
+                    item.classList.add('animate-hover');
+                }, 1200);
+                
+            }, 400 + (index * 200)); // Staggered delay based on item index
+        });
     }
     
     // Animate project cards
@@ -1123,6 +1296,175 @@ function initializeProject() {
         }
         
         return aboutContent;
+    }
+    
+    // Function to create project cards with View Details button
+    function createProjectCards(projects) {
+        const projectsContainer = document.createElement('div');
+        projectsContainer.className = 'projects-grid';
+        
+        projects.forEach((project, index) => {
+            const card = document.createElement('div');
+            card.className = 'project-card';
+            card.setAttribute('data-index', index);
+            
+            // Create project preview with image if available
+            const preview = document.createElement('div');
+            preview.className = 'project-preview';
+            
+            if (project.preview) {
+                const img = document.createElement('img');
+                img.src = project.preview;
+                img.alt = project.title;
+                img.className = 'project-image';
+                preview.appendChild(img);
+                
+                // Add overlay with View Details button
+                const overlay = document.createElement('div');
+                overlay.className = 'project-overlay';
+                
+                const viewDetailsBtn = document.createElement('button');
+                viewDetailsBtn.className = 'view-details-btn';
+                viewDetailsBtn.textContent = 'View Details';
+                viewDetailsBtn.addEventListener('click', () => {
+                    showProjectDetails(project);
+                });
+                
+                overlay.appendChild(viewDetailsBtn);
+                preview.appendChild(overlay);
+            } else {
+                // If no image, show a placeholder
+                preview.innerHTML = `<div class="project-placeholder">
+                    <i class="fas fa-code"></i>
+                    <p>No Preview Available</p>
+                </div>`;
+            }
+            
+            // Project header with title and GitHub link
+            const header = document.createElement('div');
+            header.className = 'project-header';
+            
+            const title = document.createElement('h3');
+            title.className = 'project-title';
+            title.textContent = project.title;
+            
+            const githubLink = document.createElement('a');
+            githubLink.className = 'github-link';
+            githubLink.href = project.github;
+            githubLink.target = '_blank';
+            githubLink.rel = 'noopener noreferrer';
+            githubLink.innerHTML = '<i class="fab fa-github"></i>';
+            githubLink.setAttribute('aria-label', 'View project on GitHub');
+            
+            header.appendChild(title);
+            header.appendChild(githubLink);
+            
+            // Project technologies
+            const technologies = document.createElement('div');
+            technologies.className = 'project-tech';
+            
+            if (project.technologies && project.technologies.length > 0) {
+                project.technologies.forEach(tech => {
+                    const techTag = document.createElement('span');
+                    techTag.className = 'tech-tag';
+                    techTag.textContent = tech;
+                    technologies.appendChild(techTag);
+                });
+            }
+            
+            // Assemble card
+            card.appendChild(preview);
+            card.appendChild(header);
+            card.appendChild(technologies);
+            
+            projectsContainer.appendChild(card);
+        });
+        
+        return projectsContainer;
+    }
+
+    // Function to show project details modal
+    function showProjectDetails(project) {
+        // Remove any existing modal
+        const existingModal = document.querySelector('.project-modal');
+        if (existingModal) {
+            existingModal.remove();
+        }
+        
+        // Create modal container
+        const modal = document.createElement('div');
+        modal.className = 'project-modal';
+        
+        // Create modal content
+        const modalContent = document.createElement('div');
+        modalContent.className = 'modal-content';
+        
+        // Close button
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'modal-close-btn';
+        closeBtn.innerHTML = '&times;';
+        closeBtn.addEventListener('click', () => {
+            modal.classList.add('modal-fade-out');
+            setTimeout(() => {
+                modal.remove();
+            }, 300);
+        });
+        
+        // Project details
+        const detailsContainer = document.createElement('div');
+        detailsContainer.className = 'project-details-container';
+        
+        // Project image
+        if (project.preview) {
+            const img = document.createElement('img');
+            img.src = project.preview;
+            img.alt = project.title;
+            img.className = 'modal-project-image';
+            detailsContainer.appendChild(img);
+        }
+        
+        // Project info
+        const projectInfo = document.createElement('div');
+        projectInfo.className = 'project-info';
+        
+        projectInfo.innerHTML = `
+            <h2>${project.title}</h2>
+            <p class="project-modal-description">${project.description}</p>
+            <div class="project-tech-list">
+                <h3>Technologies</h3>
+                <div class="tech-tags">
+                    ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                </div>
+            </div>
+            ${project.github ? `<a href="${project.github}" target="_blank" rel="noopener noreferrer" class="github-modal-link">
+                <i class="fab fa-github"></i> View on GitHub
+            </a>` : ''}
+        `;
+        
+        detailsContainer.appendChild(projectInfo);
+        
+        // Add elements to modal
+        modalContent.appendChild(closeBtn);
+        modalContent.appendChild(detailsContainer);
+        modal.appendChild(modalContent);
+        
+        // Add modal to body
+        document.body.appendChild(modal);
+        
+        // Add fade-in animation
+        setTimeout(() => {
+            modal.classList.add('modal-fade-in');
+        }, 10);
+        
+        // Close when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('modal-fade-out');
+                setTimeout(() => {
+                    modal.remove();
+                }, 300);
+            }
+        });
     }
     
     // Initialize the page
