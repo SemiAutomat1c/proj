@@ -92,57 +92,57 @@ const teamMembers = [
     {
         id: 2,
         name: "Kyndel Roy Suarez",
-        title: "Graphic Designer & Digital Artist",
+        title: "Software/AI Engineer",
         image: "assets/img/roy.jpg",
         bio: "My journey in art and design began when I was very young, drawing characters from my favorite animated shows. I grew up in a creative household where my mother, an elementary school art teacher, encouraged me to explore different artistic mediums. During my early school years at St. Mary's Elementary, I won several local art competitions which fueled my passion further. In junior high, I discovered digital design and taught myself how to use design software by watching online tutorials. Now at the University of Mindanao, I'm focusing on graphic design with a special interest in user interface aesthetics. I've worked on several campus publication designs and created logos for student organizations. My design philosophy combines clean aesthetics with functionality - I believe that good design should not only look beautiful but also serve its purpose effectively. Outside of design work, I enjoy photography and collecting vintage design books for inspiration.",
-        skills: ["Graphic Design", "Illustration", "Photoshop", "Illustrator", "UI/UX"],
+        skills: ["Machine Learning", "Artificial Intelligence", "Software Engineering", "Cloud Computing", "Data Science"],
         interests: [
-            "Graphic design and typography",
-            "Digital illustration and animation",
-            "User interface aesthetics",
-            "Brand identity development",
-            "Responsive design principles"
+            "Full-stack development and system architecture",
+            "Cloud computing and DevOps practices",
+            "Software design patterns and best practices",
+            "Database management and optimization",
+            "Artificial Intelligence and Machine Learning"
         ],
         goals: [
-            "Become a professional UI/UX designer for leading tech companies",
-            "Create a design system that can be implemented across various platforms",
-            "Master the latest design tools and software",
-            "Publish a portfolio of creative design work"
+            "Become a proficient full-stack software engineer",
+            "Master modern software development frameworks and tools",
+            "Contribute to open-source projects and tech community",
+            "Build scalable and innovative software solutions"
         ],
         quote: "Design is not just what it looks like and feels like. Design is how it works. I strive to create designs that are both beautiful and functional.",
         education: [
             {
                 level: "preschool",
                 degree: "Early Childhood Education",
-                institution: "Sunshine Kids Preschool",
+                institution: "Anderson Elementary School",
                 year: "2010 - 2012",
                 description: "Early foundation in learning through play and social interaction"
             },
             {
                 level: "elementary",
                 degree: "Elementary Education",
-                institution: "St. Mary's Elementary",
+                institution: "Anderson Elementary School",
                 year: "2012 - 2018",
                 description: "Excellence in Mathematics and Science, Member of the Science Club"
             },
             {
                 level: "junior",
                 degree: "Junior High School",
-                institution: "St. Mary's High School",
+                institution: "Justino Sevilla Junior High School",
                 year: "2018 - 2022",
                 description: "Class Representative, Active in Robotics Club"
             },
             {
                 level: "senior",
                 degree: "Senior High School - Art & Design",
-                institution: "St. Mary's High School",
+                institution: "Justino Sevilla Senior High School",
                 year: "2022 - Present",
                 description: "Focus on Graphic Design and Digital Art"
             },
             {
                 level: "college",
                 degree: "BS in Computer Science",
-                institution: "Community Art Center",
+                institution: "University of Mindanao Tagum",
                 year: "2023",
                 description: "Advanced techniques in digital illustration and design"
             }
@@ -160,7 +160,7 @@ const teamMembers = [
             }
         ],
         contact: {
-            email: "kyndel@example.com",
+            email: "k.bangoy.suarez@gmail.com",
             portfolio: "kyndelroy.design",
             instagram: "instagram.com/kyndelroy"
         }
