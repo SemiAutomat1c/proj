@@ -189,7 +189,7 @@ const teamMembers = [
             "Contribute to the field of computer security research",
             "Start a company focused on digital security solutions"
         ],
-        quote: "It's not a bug, it's a feature. Aiming to be the best in cybersecurity and programming. Ano? Bakit ng ba? You tell me, Damn it.",
+        quote: "It's not a bug, it's a feature. Aiming to be the best in cybersecurity and programming. Ano? Bakit nga ba? You tell me, Damn it.",
         education: [
             {
                 level: "preschool",

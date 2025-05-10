@@ -189,7 +189,7 @@ const teamMembers = [
             "Contribute to the field of computer security research",
             "Start a company focused on digital security solutions"
         ],
-        quote: "It's not a bug, it's a feature. Aiming to be the best in cybersecurity and programming. Ano? Bakit ng ba? You tell me, Damn it.",
+        quote: "It's not a bug, it's a feature. Aiming to be the best in cybersecurity and programming. Ano? Bakit nga ba? You tell me, Damn it.",
         education: [
             {
                 level: "preschool",
@@ -241,6 +241,13 @@ const teamMembers = [
                 technologies: ["Ruby"],
                 preview: "assets/img/projects/rb.png",
                 github: "https://github.com/pasta-lover69/Ruby-Projects"
+            },
+            {
+                title: "Password Manager",
+                description: "A secure password manager that allows users to store, generate, and manage their passwords safely. Built with Python and Tkinter for a user-friendly interface.",
+                technologies: ["Python", "Tkinter", "JavaScript", "HTML/CSS"],
+                preview: "assets/img/projects/pass_manager.png",
+                github: "https://github.com/pasta-lover69/Password-Manager"
             }
         ],
         contact: {
