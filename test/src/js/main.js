@@ -92,77 +92,79 @@ const teamMembers = [
     {
         id: 2,
         name: "Kyndel Roy Suarez",
-        title: "Graphic Designer & Digital Artist",
+        title: "Software/AI Engineer",
         image: "assets/img/roy.jpg",
-        bio: "My journey in art and design began when I was very young, drawing characters from my favorite animated shows. I grew up in a creative household where my mother, an elementary school art teacher, encouraged me to explore different artistic mediums. During my early school years at St. Mary's Elementary, I won several local art competitions which fueled my passion further. In junior high, I discovered digital design and taught myself how to use design software by watching online tutorials. Now at the University of Mindanao, I'm focusing on graphic design with a special interest in user interface aesthetics. I've worked on several campus publication designs and created logos for student organizations. My design philosophy combines clean aesthetics with functionality - I believe that good design should not only look beautiful but also serve its purpose effectively. Outside of design work, I enjoy photography and collecting vintage design books for inspiration.",
-        skills: ["Graphic Design", "Illustration", "Photoshop", "Illustrator", "UI/UX"],
+        bio: "My journey in tech began when I was very young, tinkering with gadgets and exploring how they worked. I grew up in a household that encouraged curiosity and problem-solving, which naturally led me to programming. During my early school years at St. Mary's Elementary, I excelled in math and science, which fueled my passion for technology. In junior high, I discovered software development and taught myself coding by building small projects and experimenting with different programming languages. Now at the University of Mindanao, I'm focusing on software engineering with a special interest in backend systems and cloud computing. I've worked on several academic projects and contributed to open-source initiatives. My engineering philosophy combines clean code with efficient problem-solving - I believe that great software should not only work seamlessly but also be maintainable and scalable. Outside of coding, I enjoy reading tech blogs and participating in hackathons for inspiration.",
+        skills: ["JavaScript", "Python", "Node.js", "React", "Cloud Computing"],
         interests: [
-            "Graphic design and typography",
-            "Digital illustration and animation",
-            "User interface aesthetics",
-            "Brand identity development",
-            "Responsive design principles"
+            "Backend development and APIs",
+            "Cloud infrastructure and deployment",
+            "Algorithm design and optimization",
+            "Open-source contribution",
+            "Tech community events and hackathons"
         ],
         goals: [
-            "Become a professional UI/UX designer for leading tech companies",
-            "Create a design system that can be implemented across various platforms",
-            "Master the latest design tools and software",
-            "Publish a portfolio of creative design work"
+            "Become a lead software engineer in a tech company",
+            "Develop scalable backend systems for large-scale applications",
+            "Master cloud technologies like AWS and Azure",
+            "Contribute to open-source projects that impact the tech community"
         ],
-        quote: "Design is not just what it looks like and feels like. Design is how it works. I strive to create designs that are both beautiful and functional.",
+        quote: "Code is like humor. When you have to explain it, it’s bad. I strive to write code that speaks for itself.",
         education: [
             {
                 level: "preschool",
                 degree: "Early Childhood Education",
-                institution: "Sunshine Kids Preschool",
-                year: "2010 - 2012",
+                institution: "Anderson Elementary School",
+                year: "2007 - 2009",
                 description: "Early foundation in learning through play and social interaction"
             },
             {
                 level: "elementary",
                 degree: "Elementary Education",
-                institution: "St. Mary's Elementary",
-                year: "2012 - 2018",
+                institution: "Anderson Elementary School",
+                year: "2009 - 2015",
                 description: "Excellence in Mathematics and Science, Member of the Science Club"
             },
             {
                 level: "junior",
                 degree: "Junior High School",
-                institution: "St. Mary's High School",
-                year: "2018 - 2022",
-                description: "Class Representative, Active in Robotics Club"
+                institution: "Justino Sevilla Junior High School",
+                year: "2015 - 2019",
+                description: "Class President, Active in Science Club and Journalism"
             },
             {
                 level: "senior",
-                degree: "Senior High School - Art & Design",
-                institution: "St. Mary's High School",
-                year: "2022 - Present",
-                description: "Focus on Graphic Design and Digital Art"
+                degree: "Senior High School - ABM",
+                institution: "Justino Sevilla Senior High School",
+                year: "2019 - 2021",
+                description: "Studied in the ABM track, focusing on business and technology"
             },
             {
                 level: "college",
                 degree: "BS in Computer Science",
-                institution: "Community Art Center",
-                year: "2023",
-                description: "Advanced techniques in digital illustration and design"
+                institution: "University of Mindanao Tagum",
+                year: "2023-2025",
+                description: "Advanced techniques in software engineering and cloud computing"
             }
         ],
         projects: [
             {
-                title: "School Yearbook Design",
-                description: "Lead designer for the annual school yearbook, creating layouts and graphics.",
-                technologies: ["InDesign", "Photoshop", "Illustrator"]
+                title: "Inventory Management System",
+                description: "Developed a robust inventory management system for small businesses to track stock and sales.",
+                technologies: ["Node.js", "Express", "MongoDB", "React"],
+                github: "https://github.com/kyndelroy/inventory-system"
             },
             {
-                title: "Environmental Awareness Campaign",
-                description: "Created posters and digital content for school's environmental initiative.",
-                technologies: ["Illustrator", "Photoshop", "Digital Drawing"]
+                title: "Weather App",
+                description: "Built a weather forecasting app using APIs to provide real-time weather updates.",
+                technologies: ["JavaScript", "React", "OpenWeather API"],
+                github: "https://github.com/kyndelroy/weather-app"
             }
         ],
         contact: {
-            email: "kyndel@example.com",
-            portfolio: "kyndelroy.design",
-            instagram: "instagram.com/kyndelroy"
+            email: "k.bangoy.suarez@gmail.com",
+            github: "https://github.com/KyndelRoy",
+            instagram: "instagram.com/kyndelroy",
         }
     },
     {
