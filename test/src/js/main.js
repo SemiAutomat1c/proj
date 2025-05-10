@@ -263,7 +263,7 @@ const teamMembers = [
     {
         id: 4,
         name: "Nina Kristina Nillas",
-        title: "Digital Content Creator & Media Specialist",
+        title: "Digital Content Creator",
         image: "assets/img/Nina.jpg",
         bio: "My story begins in a home filled with books and stories, where my parents instilled in me a love for reading and creative expression. Growing up, I was always the one with a camera or notebook in hand, documenting everyday moments and turning them into stories. Throughout elementary and high school at St. Mary's, I was actively involved in the school newspaper and media club, where I discovered my talent for combining words and visuals to communicate ideas. My interest in digital media developed during my senior year when I created a video documentary about our school's history, which won a regional student media award. This experience opened my eyes to the power of multimedia storytelling. Currently studying at the University of Mindanao, I focus on digital media production while managing the university's social media content as a student assistant. I've developed skills in content planning, video production, and social media analytics. I believe that compelling content has the power to educate, inspire, and create meaningful connections. In my free time, I volunteer at a local community radio station and run a blog about student life and technology. My goal is to use digital media to give voice to important stories that might otherwise go untold.",
         skills: ["Content Writing", "Video Editing", "Social Media", "Photography", "Storytelling"],
