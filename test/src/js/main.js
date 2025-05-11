@@ -251,7 +251,7 @@ const teamMembers = [
                 title: "Password Manager",
                 description: "A secure password manager that allows users to store, generate, and manage their passwords safely. Built with Python and Tkinter for a user-friendly interface.",
                 technologies: ["Python", "Tkinter", "JavaScript", "HTML/CSS"],
-                preview: "assets/img/projects/pass_manager.png",
+                preview: "assets/img/pm.png",
                 github: "https://github.com/pasta-lover69/Password-Manager"
             }
         ],
