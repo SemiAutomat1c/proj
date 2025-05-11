@@ -268,19 +268,19 @@ const teamMembers = [
         bio: "Back in junior high, I absolutely dreaded ICT. It was all about coding HTML in Notepad, which felt less like building a website and more like arguing with a brick wall. I swore I’d never touch anything that even smelled like web development again. Fast forward to 2023: there I was, proudly showing off my little coding projects—like a calculator and a bato-bato pick (rock-paper-scissors) game—like I had just hacked into NASA. Somehow, I had gone from anti-code to kind-of-obsessed. Eventually, I made the bold (and slightly terrifying) decision to shift from Hospitality Management to Computer Science—a choice that took me six months, three existential crises, and countless cups of coffee to finalize. The first few months felt like being thrown into the deep end… without knowing how to swim... and the pool was full of JavaScript errors. I had zero tech background and survived purely on self-study, YouTube tutorials, and BroCode's soothing voice. There were times I seriously wondered if I had made a huge mistake choosing this so-called “fun” program. But now, in my second year, I’m leveling up. I’m solving complex problems, diving into algorithms, and honestly, some of it feels like trying to master Sova lineups in Valorant—equal parts strategy, precision, and frustration. And weirdly enough… I love it.",
         skills: ["JAVA", "HTML", "MySQL", "PYTHON", "CSS"],
         interests: [
-            "Digital content creation and storytelling",
-            "Social media strategy and analytics",
-            "Video production and editing",
-            "Written communication",
-            "Digital marketing and audience engagement"
+            "Artificial Intelligence & Machine Learning ",
+            "Backend Development",
+            "Data Analytics",
+            "Cybersecurity Fundamentals",
+            "Database Management"
         ],
         goals: [
-            "Develop compelling multimedia content for digital platforms",
-            "Master the art of storytelling across different mediums",
-            "Create a popular blog or YouTube channel on tech topics",
-            "Lead content strategy for a major organization"
+            "Design Scalable Machine Learning Pipelines",
+            "Develop a full-stack application from scratch",
+            "Gain experience in agile development and team collaboration",
+            "Get a job in your desired field (software engineering, data science, etc.)"
         ],
-        quote: "Stories are the most powerful way to put ideas into the world. I aim to tell stories that connect people and technology in meaningful ways.",
+        quote: "recent search history was how to center a div.",
         education: [
             {
                 level: "preschool",
@@ -334,8 +334,9 @@ const teamMembers = [
         ],
         contact: {
             email: "ninakristinanillas@gmail.com",
-            portfolio: "kristinanillas.com",
-            youtube: "youtube.com/kristinanillas"
+            Facebook: "facebook.com/kristina.nillas",
+            linked: "linkedin.com/in/nina-kristina-nillas",
+            github:"github.com/print-betty"
         }
     }
 ];
