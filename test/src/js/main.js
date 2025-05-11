@@ -1,11 +1,11 @@
 // Team Members Data
 const teamMembers = [
     {
-        id: 1,
+        id: 3,
         name: "Ryan Christian Deniega",
         title: "Web Developer & UI Designer",
         image: "assets/img/Ryan.JPEG",
-        bio: "Hi, I'm Ryan Born in Pasay and raised in Mindanao, I discovered my passion for tech in high school mostly from playing a lot of online games and getting curious about what made them tick. That curiosity led me to web development, where I started building personal projects just for the fun (and frustration) of it. Now, I'm a Computer Science student at the University of Mindanao, focusing on web development and UI design. I spend most of my time coding, listening to music, and enjoying the peace of doing things solo.I believe great tech should feel natural — simple, intuitive, and made for everyone.",
+        bio: "Hi, I'm Ryan. I discovered my passion for tech in high school mostly from playing a lot of online games and getting curious about what made them tick. That curiosity led me to web development, where I started building personal projects just for the fun (and frustration) of it. Now, I'm a Computer Science student at the University of Mindanao, focusing on web development and UI design. I spend most of my time coding, listening to music, and enjoying the peace of doing things solo.I believe great tech should feel natural — simple, intuitive, and made for everyone.",
         skills: ["HTML", "CSS", "JavaScript", "Photoshop", "UI Design"],
         interests: [
             "Exploring new web technologies and frameworks",
@@ -171,7 +171,7 @@ const teamMembers = [
         }
     },
     {
-        id: 3,
+        id: 1,
         name: "Jayvien Mocallay",
         title: "Cybersecurity Specialist & Programmer",
         image: "assets/img/jeb.jpg",
