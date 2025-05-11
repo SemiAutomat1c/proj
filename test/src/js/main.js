@@ -149,16 +149,19 @@ const teamMembers = [
         ],
         projects: [
             {
-                title: "Inventory Management System",
-                description: "Developed a robust inventory management system for small businesses to track stock and sales.",
-                technologies: ["Node.js", "Express", "MongoDB", "React"],
-                github: "https://github.com/kyndelroy/inventory-system"
+                title: "Arté Booking System",
+                description: "A streamlined web-based platform that allows users to schedule, manage, and track service appointments with ease—designed for efficiency, real-time updates, and user convenience.",
+                technologies: ["PHP", "MySQL", "HTML/CSS"],
+                preview: "assets/img/projects/Arte_web.png",
+                github: "https://github.com/pasta-lover69/Arte_project"
             },
             {
-                title: "Weather App",
-                description: "Built a weather forecasting app using APIs to provide real-time weather updates.",
-                technologies: ["JavaScript", "React", "OpenWeather API"],
-                github: "https://github.com/kyndelroy/weather-app"
+              title: "Team Portfolio Website - CS15 Project",
+              description: "A responsive and interactive team portfolio website for the CS15 Web Design & Development course at University of Mindanao.",
+              technologies: ["HTML5", "CSS3", "JavaScript", "Font Awesome"],
+              preview: "assets/img/projects/proj.jpg",
+              github: "https://github.com/SemiAutomat1c/proj"
+
             }
         ],
         contact: {
