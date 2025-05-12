@@ -198,7 +198,7 @@ const teamMembers = [
             "Contribute to the field of computer security research",
             "Start a company focused on digital security solutions"
         ],
-        quote: "It's not a bug, it's a feature. Aiming to be the best in cybersecurity and programming. Ano? Bakit nga ba? You tell me, Damn it.",
+        quote: "Ano? Bakit nga ba? You tell me, Damn it.",
         education: [
             {
                 level: "preschool",
@@ -238,12 +238,14 @@ const teamMembers = [
         ],
         projects: [
             {
-                title: "Arté Booking System",
-                description: "A streamlined web-based platform that allows users to schedule, manage, and track service appointments with ease—designed for efficiency, real-time updates, and user convenience.",
-                technologies: ["PHP", "MySQL", "HTML/CSS"],
-                preview: "assets/img/projects/Arte_web.png",
-                github: "https://github.com/pasta-lover69/Arte_project"
+                title: "Password Manager",
+                description: "A secure password manager that allows users to store, generate, and manage their passwords safely. Built with Python and Tkinter for a user-friendly interface.",
+                technologies: ["Python", "Tkinter", "JavaScript", "HTML/CSS"],
+                preview: "assets/img/pm.png",
+                github: "https://github.com/pasta-lover69/Password-Manager",
+                website: "https://password-manager-62hc.onrender.com/"
             },
+
             {
                 title: "Ruby Projects",
                 description: "Currently Learning Ruby to be more widely know the concept of each programming langguages. And soon to learn the framework of each programming language.",
@@ -252,11 +254,11 @@ const teamMembers = [
                 github: "https://github.com/pasta-lover69/Ruby-Projects"
             },
             {
-                title: "Password Manager",
-                description: "A secure password manager that allows users to store, generate, and manage their passwords safely. Built with Python and Tkinter for a user-friendly interface.",
-                technologies: ["Python", "Tkinter", "JavaScript", "HTML/CSS"],
-                preview: "assets/img/pm.png",
-                github: "https://github.com/pasta-lover69/Password-Manager"
+                title: "Arté Booking System",
+                description: "A streamlined web-based platform that allows users to schedule, manage, and track service appointments with ease—designed for efficiency, real-time updates, and user convenience.",
+                technologies: ["PHP", "MySQL", "HTML/CSS"],
+                preview: "assets/img/projects/Arte_web.png",
+                github: "https://github.com/pasta-lover69/Arte_project"
             }
         ],
         contact: {
