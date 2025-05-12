@@ -1,5 +1,4 @@
 // Initialize Vercel Analytics
-import { inject } from '@vercel/analytics';
-
-// Inject the analytics script
-inject(); 
+// The Vercel Analytics script is already loaded via CDN in the HTML head
+// This file is kept for documentation purposes but doesn't need to do anything
+console.log('Vercel Analytics initialized via CDN'); 
