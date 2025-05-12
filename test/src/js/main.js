@@ -431,6 +431,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Create navigation buttons for each team member
     function createNavigation() {
+        // Clear any existing navigation buttons first
+        teamNav.innerHTML = '';
+        
         teamMembers.forEach(member => {
             const button = document.createElement('button');
             button.className = 'nav-button';
