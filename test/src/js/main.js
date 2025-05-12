@@ -1,11 +1,11 @@
 // Team Members Data
 const teamMembers = [
     {
-        id: 1,
+        id: 3,
         name: "Ryan Christian Deniega",
         title: "Web Developer & UI Designer",
         image: "assets/img/Ryan.JPEG",
-        bio: "Hi, I'm Ryan Born in Pasay and raised in Mindanao, I discovered my passion for tech in high school mostly from playing a lot of online games and getting curious about what made them tick. That curiosity led me to web development, where I started building personal projects just for the fun (and frustration) of it. Now, I'm a Computer Science student at the University of Mindanao, focusing on web development and UI design. I spend most of my time coding, listening to music, and enjoying the peace of doing things solo.I believe great tech should feel natural — simple, intuitive, and made for everyone.",
+        bio: "Hi, I'm Ryan. I discovered my passion for tech in high school mostly from playing a lot of online games and getting curious about what made them tick. That curiosity led me to web development, where I started building personal projects just for the fun (and frustration) of it. Now, I'm a Computer Science student at the University of Mindanao, focusing on web development and UI design. I spend most of my time coding, listening to music, and enjoying the peace of doing things solo.I believe great tech should feel natural — simple, intuitive, and made for everyone.",
         skills: ["HTML", "CSS", "JavaScript", "Photoshop", "UI Design"],
         interests: [
             "Exploring new web technologies and frameworks",
@@ -175,7 +175,7 @@ const teamMembers = [
         }
     },
     {
-        id: 3,
+        id: 1,
         name: "Jayvien Mocallay",
         title: "Cybersecurity Specialist & Programmer",
         image: "assets/img/jeb.jpg",
@@ -255,7 +255,7 @@ const teamMembers = [
                 title: "Password Manager",
                 description: "A secure password manager that allows users to store, generate, and manage their passwords safely. Built with Python and Tkinter for a user-friendly interface.",
                 technologies: ["Python", "Tkinter", "JavaScript", "HTML/CSS"],
-                preview: "assets/img/projects/pass_manager.png",
+                preview: "assets/img/pm.png",
                 github: "https://github.com/pasta-lover69/Password-Manager"
             }
         ],
@@ -270,59 +270,59 @@ const teamMembers = [
     {
         id: 4,
         name: "Nina Kristina Nillas",
-        title: "Digital Content Creator & Media Specialist",
+        title: "Machine Learning Engineer",
         image: "assets/img/Nina.jpg",
-        bio: "My story begins in a home filled with books and stories, where my parents instilled in me a love for reading and creative expression. Growing up, I was always the one with a camera or notebook in hand, documenting everyday moments and turning them into stories. Throughout elementary and high school at St. Mary's, I was actively involved in the school newspaper and media club, where I discovered my talent for combining words and visuals to communicate ideas. My interest in digital media developed during my senior year when I created a video documentary about our school's history, which won a regional student media award. This experience opened my eyes to the power of multimedia storytelling. Currently studying at the University of Mindanao, I focus on digital media production while managing the university's social media content as a student assistant. I've developed skills in content planning, video production, and social media analytics. I believe that compelling content has the power to educate, inspire, and create meaningful connections. In my free time, I volunteer at a local community radio station and run a blog about student life and technology. My goal is to use digital media to give voice to important stories that might otherwise go untold.",
-        skills: ["Content Writing", "Video Editing", "Social Media", "Photography", "Storytelling"],
+        bio: "Back in junior high, I absolutely dreaded ICT. It was all about coding HTML in Notepad, which felt less like building a website and more like arguing with a brick wall. I swore I'd never touch anything that even smelled like web development again. Fast forward to 2023: there I was, proudly showing off my little coding projects—like a calculator and a bato-bato pick (rock-paper-scissors) game—like I had just hacked into NASA. Somehow, I had gone from anti-code to kind-of-obsessed. Eventually, I made the bold (and slightly terrifying) decision to shift from Hospitality Management to Computer Science—a choice that took me six months, three existential crises, and countless cups of coffee to finalize. The first few months felt like being thrown into the deep end… without knowing how to swim... and the pool was full of JavaScript errors. I had zero tech background and survived purely on self-study, YouTube tutorials, and BroCode's soothing voice. There were times I seriously wondered if I had made a huge mistake choosing this so-called "fun" program. But now, in my second year, I'm leveling up. I'm solving complex problems, diving into algorithms, and honestly, some of it feels like trying to master Sova lineups in Valorant—equal parts strategy, precision, and frustration. And weirdly enough… I love it.",
+        skills: ["JAVA", "HTML", "MySQL", "PYTHON", "CSS"],
         interests: [
-            "Digital content creation and storytelling",
-            "Social media strategy and analytics",
-            "Video production and editing",
-            "Written communication",
-            "Digital marketing and audience engagement"
+            "Artificial Intelligence & Machine Learning ",
+            "Backend Development",
+            "Data Analytics",
+            "Cybersecurity Fundamentals",
+            "Database Management"
         ],
         goals: [
-            "Develop compelling multimedia content for digital platforms",
-            "Master the art of storytelling across different mediums",
-            "Create a popular blog or YouTube channel on tech topics",
-            "Lead content strategy for a major organization"
+            "Design Scalable Machine Learning Pipelines",
+            "Develop a full-stack application from scratch",
+            "Gain experience in agile development and team collaboration",
+            "Get a job in your desired field (software engineering, data science, etc.)"
         ],
-        quote: "Stories are the most powerful way to put ideas into the world. I aim to tell stories that connect people and technology in meaningful ways.",
+        quote: "recent search history was how to center a div.",
         education: [
             {
                 level: "preschool",
                 degree: "Early Childhood Education",
-                institution: "Sunshine Kids Preschool",
-                year: "2010 - 2012",
-                description: "Early foundation in learning through play and social interaction"
+                institution: "Nabunturan Elementary School",
+                year: "2009 - 2010",
+                description: "The only time my problem was choosing the best color for my drawing book "
             },
             {
                 level: "elementary",
                 degree: "Elementary Education",
-                institution: "St. Mary's Elementary",
-                year: "2012 - 2018",
-                description: "Excellence in Mathematics and Science, Member of the Science Club"
+                institution: "Nabunturan Elementary School SPED Center",
+                year: "2010 - 2016",
+                description: "Award: Most Punctual"
             },
             {
                 level: "junior",
                 degree: "Junior High School",
-                institution: "St. Mary's High School",
-                year: "2018 - 2022",
-                description: "Class Representative, Active in Robotics Club"
+                institution: "Assumption College of Nabunturan",
+                year: "2016 - 2020",
+                description: "Our ICT subject taught us to code in HTML... I HATE ICT "
             },
             {
                 level: "senior",
-                degree: "Senior High School - Media Studies",
-                institution: "St. Mary's High School",
-                year: "2022 - Present",
-                description: "Focus on Digital Media and Storytelling"
+                degree: "Senior High School - Accountancy, Business, and Management (ABM) ",
+                institution: "AAssumption College of Nabunturan",
+                year: "2020-2022",
+                description: "Teacher: na kuha ang trial balance? me: na kuha ang unsa maam?"
             },
             {
                 level: "college",
                 degree: "BS in Computer Science",
-                institution: "Youth Media Center",
-                year: "2023",
-                description: "Advanced techniques in digital storytelling and multimedia production"
+                institution: "University of Mindanao Tagum College",
+                year: "2023-present",
+                description: "How to center a div?"
             }
         ],
         projects: [
@@ -340,9 +340,10 @@ const teamMembers = [
             }
         ],
         contact: {
-            email: "kristina@example.com",
-            portfolio: "kristinanillas.com",
-            youtube: "youtube.com/kristinanillas"
+            email: "ninakristinanillas@gmail.com",
+            Facebook: "facebook.com/kristina.nillas",
+            linked: "linkedin.com/in/nina-kristina-nillas",
+            github:"github.com/print-betty"
         }
     }
 ];
@@ -372,7 +373,6 @@ document.addEventListener('DOMContentLoaded', function() {
         createTeamMemberSections();
         setupThemeToggle();
         setupScrollToTop();
-        createMainTechnologiesSection();
         
         // Show the first team member by default
         showTeamMember(1);
@@ -1412,37 +1412,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         return projectsContainer;
-    }
-
-    // Function to create a styled technologies section for the main page
-    function createMainTechnologiesSection() {
-        const container = document.createElement('div');
-        container.className = 'technologies-container main-technologies';
-        
-        const title = document.createElement('h3');
-        title.className = 'technologies-title';
-        title.innerHTML = '<i class="fas fa-code"></i> Technologies';
-        container.appendChild(title);
-        
-        const list = document.createElement('div');
-        list.className = 'technologies-list';
-        
-        const technologies = ["PHP", "MySQL", "Vanilla JavaScript", "CSS3", "PDF.js", "Next.js", "TypeScript", "Tailwind CSS"];
-        
-        technologies.forEach(tech => {
-            const tag = document.createElement('span');
-            tag.className = 'technology-tag';
-            tag.textContent = tech;
-            list.appendChild(tag);
-        });
-        
-        container.appendChild(list);
-        
-        // Insert after the team story section
-        const teamStory = document.getElementById('team-story');
-        if (teamStory) {
-            teamStory.parentNode.insertBefore(container, teamStory.nextSibling);
-        }
     }
 
     // Function to show project details modal
