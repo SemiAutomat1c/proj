@@ -79,5 +79,21 @@
     </footer>
 
     <script src="js/main.js"></script>
+    
+    <!-- Backup script to ensure loading screen is hidden -->
+    <script>
+      // Ensure loading screen gets hidden even if there's an issue with main.js
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          const loadingScreen = document.querySelector('.loading-screen');
+          if (loadingScreen) {
+            loadingScreen.classList.add('hidden');
+            setTimeout(function() {
+              loadingScreen.style.display = 'none';
+            }, 500);
+          }
+        }, 1000);
+      });
+    </script>
   </body>
 </html>
