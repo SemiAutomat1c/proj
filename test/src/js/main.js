@@ -64,21 +64,24 @@ const teamMembers = [
                 description: "A digital reading companion for book lovers to manage, read, and share books. I made it so you can finally organize your e-books before your collection gets out of hand.",
                 technologies: ["PHP", "MySQL", "Vanilla JavaScript", "CSS3", "PDF.js"],
                 preview: "assets/img/projects/bookhub.jpg",
-                github: "https://github.com/SemiAutomat1c/bookhub-clean"
+                github: "https://github.com/SemiAutomat1c/bookhub-clean",
+                website: "https://bookhub-clean.vercel.app/"
             },
             {
                 title: "Modern POS System",
                 description: "Built a sleek and modern POS system because who doesn't want to make checkout lines faster and cooler?",
                 technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
                 preview: "assets/img/projects/pos.jpg",
-                github: "https://github.com/SemiAutomat1c/POS"
+                github: "https://github.com/SemiAutomat1c/POS",
+                website: "https://pos-alpha-one.vercel.app/"
             },
             {
                 title: "Paluwagan Management System",
                 description: "Created a platform to handle informal savings groups, payments, and member contributions — because who said saving can't be digital?",
                 technologies: ["TypeScript", "CSS", "JavaScript"],
                 preview: "assets/img/projects/paluwagan.jpg",
-                github: "https://github.com/SemiAutomat1c/paluwagan-system"
+                github: "https://github.com/SemiAutomat1c/paluwagan-system",
+                website: "https://paluwagan-system.vercel.app/"
             }
         ],
         contact: {
@@ -109,7 +112,7 @@ const teamMembers = [
             "Master cloud technologies like AWS and Azure",
             "Contribute to open-source projects that impact the tech community"
         ],
-        quote: "Code is like humor. When you have to explain it, it’s bad. I strive to write code that speaks for itself.",
+        quote: "Code is like humor. When you have to explain it, it's bad. I strive to write code that speaks for itself.",
         education: [
             {
                 level: "preschool",
@@ -153,15 +156,16 @@ const teamMembers = [
                 description: "A streamlined web-based platform that allows users to schedule, manage, and track service appointments with ease—designed for efficiency, real-time updates, and user convenience.",
                 technologies: ["PHP", "MySQL", "HTML/CSS"],
                 preview: "assets/img/projects/Arte_web.png",
-                github: "https://github.com/pasta-lover69/Arte_project"
+                github: "https://github.com/pasta-lover69/Arte_project",
+                website: "https://arte-booking.vercel.app/"
             },
             {
               title: "Team Portfolio Website - CS15 Project",
               description: "A responsive and interactive team portfolio website for the CS15 Web Design & Development course at University of Mindanao.",
               technologies: ["HTML5", "CSS3", "JavaScript", "Font Awesome"],
               preview: "assets/img/projects/proj.jpg",
-              github: "https://github.com/SemiAutomat1c/proj"
-
+              github: "https://github.com/SemiAutomat1c/proj",
+              website: "https://cs15-portfolio.vercel.app/"
             }
         ],
         contact: {
@@ -368,6 +372,7 @@ document.addEventListener('DOMContentLoaded', function() {
         createTeamMemberSections();
         setupThemeToggle();
         setupScrollToTop();
+        createMainTechnologiesSection();
         
         // Show the first team member by default
         showTeamMember(1);
@@ -881,8 +886,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 contactLinkContainer.appendChild(contactPlatform);
                 contactLinkContainer.appendChild(contactLink);
             
-                contactItem.appendChild(contactIcon);
-                contactItem.appendChild(contactLinkContainer);
+            contactItem.appendChild(contactIcon);
+            contactItem.appendChild(contactLinkContainer);
             
             contactInfo.appendChild(contactItem);
             });
@@ -1345,6 +1350,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
                 
                 overlay.appendChild(viewDetailsBtn);
+                
+                // Add Visit Website button if website URL exists
+                if (project.website) {
+                    const visitWebsiteBtn = document.createElement('a');
+                    visitWebsiteBtn.className = 'visit-website-btn';
+                    visitWebsiteBtn.href = project.website;
+                    visitWebsiteBtn.target = '_blank';
+                    visitWebsiteBtn.rel = 'noopener noreferrer';
+                    visitWebsiteBtn.innerHTML = '<i class="fas fa-globe"></i> Visit';
+                    overlay.appendChild(visitWebsiteBtn);
+                }
+                
                 preview.appendChild(overlay);
             } else {
                 // If no image, show a placeholder
@@ -1397,6 +1414,37 @@ document.addEventListener('DOMContentLoaded', function() {
         return projectsContainer;
     }
 
+    // Function to create a styled technologies section for the main page
+    function createMainTechnologiesSection() {
+        const container = document.createElement('div');
+        container.className = 'technologies-container main-technologies';
+        
+        const title = document.createElement('h3');
+        title.className = 'technologies-title';
+        title.innerHTML = '<i class="fas fa-code"></i> Technologies';
+        container.appendChild(title);
+        
+        const list = document.createElement('div');
+        list.className = 'technologies-list';
+        
+        const technologies = ["PHP", "MySQL", "Vanilla JavaScript", "CSS3", "PDF.js", "Next.js", "TypeScript", "Tailwind CSS"];
+        
+        technologies.forEach(tech => {
+            const tag = document.createElement('span');
+            tag.className = 'technology-tag';
+            tag.textContent = tech;
+            list.appendChild(tag);
+        });
+        
+        container.appendChild(list);
+        
+        // Insert after the team story section
+        const teamStory = document.getElementById('team-story');
+        if (teamStory) {
+            teamStory.parentNode.insertBefore(container, teamStory.nextSibling);
+        }
+    }
+
     // Function to show project details modal
     function showProjectDetails(project) {
         // Remove any existing modal
@@ -1441,20 +1489,50 @@ document.addEventListener('DOMContentLoaded', function() {
         const projectInfo = document.createElement('div');
         projectInfo.className = 'project-info';
         
-        projectInfo.innerHTML = `
-            <h2>${project.title}</h2>
-            <p class="project-modal-description">${project.description}</p>
-            <div class="project-tech-list">
-                <h3>Technologies</h3>
-                <div class="tech-tags">
-                    ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
-                </div>
-            </div>
-            ${project.github ? `<a href="${project.github}" target="_blank" rel="noopener noreferrer" class="github-modal-link">
-                <i class="fab fa-github"></i> View on GitHub
-            </a>` : ''}
-        `;
+        // Project title
+        const title = document.createElement('h2');
+        title.textContent = project.title;
+        projectInfo.appendChild(title);
         
+        // Project description
+        const description = document.createElement('p');
+        description.className = 'project-modal-description';
+        description.textContent = project.description;
+        projectInfo.appendChild(description);
+        
+        // Technologies section
+        if (project.technologies && project.technologies.length > 0) {
+            const techSection = createTechnologiesSection(project.technologies);
+            projectInfo.appendChild(techSection);
+        }
+        
+        // Project links
+        const linksContainer = document.createElement('div');
+        linksContainer.className = 'project-links';
+        
+        // GitHub link
+        if (project.github) {
+            const githubLink = document.createElement('a');
+            githubLink.className = 'github-modal-link';
+            githubLink.href = project.github;
+            githubLink.target = '_blank';
+            githubLink.rel = 'noopener noreferrer';
+            githubLink.innerHTML = '<i class="fab fa-github"></i> View on GitHub';
+            linksContainer.appendChild(githubLink);
+        }
+        
+        // Website link
+        if (project.website) {
+            const websiteLink = document.createElement('a');
+            websiteLink.className = 'website-modal-link';
+            websiteLink.href = project.website;
+            websiteLink.target = '_blank';
+            websiteLink.rel = 'noopener noreferrer';
+            websiteLink.innerHTML = '<i class="fas fa-globe"></i> Visit Website';
+            linksContainer.appendChild(websiteLink);
+        }
+        
+        projectInfo.appendChild(linksContainer);
         detailsContainer.appendChild(projectInfo);
         
         // Add elements to modal
@@ -1479,6 +1557,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 }, 300);
             }
         });
+    }
+    
+    // Function to create a styled technologies section
+    function createTechnologiesSection(technologies) {
+        const container = document.createElement('div');
+        container.className = 'technologies-container';
+        
+        const title = document.createElement('h3');
+        title.className = 'technologies-title';
+        title.innerHTML = '<i class="fas fa-code"></i> Technologies';
+        container.appendChild(title);
+        
+        const list = document.createElement('div');
+        list.className = 'technologies-list';
+        
+        technologies.forEach(tech => {
+            const tag = document.createElement('span');
+            tag.className = 'technology-tag';
+            tag.textContent = tech;
+            list.appendChild(tag);
+        });
+        
+        container.appendChild(list);
+        return container;
     }
     
     // Initialize the page
