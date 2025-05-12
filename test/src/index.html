@@ -54,14 +54,21 @@
   </div>
 </section>
 
-
-
+    <!-- Fallback navigation in case JavaScript fails -->
     <nav id="team-nav" class="team-navigation">
-      <!-- Navigation buttons will be added here by JavaScript -->
+      <button class="nav-button active" data-id="1">Jayvien Mocallay</button>
+      <button class="nav-button" data-id="2">Kyndel Roy Suarez</button>
+      <button class="nav-button" data-id="3">Ryan Christian Deniega</button>
+      <button class="nav-button" data-id="4">Nina Kristina Nillas</button>
     </nav>
 
     <main id="team-content">
-      <!-- Team member content will be displayed here -->
+      <!-- Fallback content will be added by JavaScript -->
+      <div class="fallback-message" style="text-align: center; padding: 2rem; margin: 2rem auto; max-width: 800px; background-color: var(--card-bg); border-radius: 10px; box-shadow: 0 4px 15px var(--shadow-color);">
+        <h2>Team Members</h2>
+        <p>Please select a team member from the navigation above to view their profile.</p>
+        <p>If you're seeing this message, there might be an issue with JavaScript loading. Please check your browser console for errors.</p>
+      </div>
     </main>
 
     <!-- Scroll to Top Button -->
@@ -79,6 +86,7 @@
       </div>
     </footer>
 
+    <!-- Make sure the path to main.js is correct -->
     <script src="js/main.js"></script>
     
     <!-- Backup script to ensure loading screen is hidden -->
@@ -98,6 +106,26 @@
           console.log('Team nav element:', document.getElementById('team-nav'));
           console.log('Team content element:', document.getElementById('team-content'));
           console.log('Team members data available:', typeof teamMembers !== 'undefined');
+          
+          // Add click events to fallback navigation buttons
+          document.querySelectorAll('#team-nav .nav-button').forEach(function(button) {
+            button.addEventListener('click', function() {
+              // Remove active class from all buttons
+              document.querySelectorAll('#team-nav .nav-button').forEach(function(btn) {
+                btn.classList.remove('active');
+              });
+              
+              // Add active class to clicked button
+              this.classList.add('active');
+              
+              // Show message with selected team member
+              const teamMemberName = this.textContent;
+              const fallbackMessage = document.querySelector('.fallback-message');
+              if (fallbackMessage) {
+                fallbackMessage.innerHTML = `<h2>${teamMemberName}</h2><p>JavaScript may not be fully functioning. Please check your browser console for errors.</p>`;
+              }
+            });
+          });
         }, 1000);
       });
     </script>
