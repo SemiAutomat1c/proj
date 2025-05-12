@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <!-- Vercel Analytics -->
     <script defer src="https://unpkg.com/@vercel/analytics"></script>
-    
+    <!-- Test script -->
+    <script defer src="js/test.js"></script>
   </head>
   <body>
     <!-- Loading Screen -->
@@ -92,6 +93,11 @@
               loadingScreen.style.display = 'none';
             }, 500);
           }
+          
+          // Debug information
+          console.log('Team nav element:', document.getElementById('team-nav'));
+          console.log('Team content element:', document.getElementById('team-content'));
+          console.log('Team members data available:', typeof teamMembers !== 'undefined');
         }, 1000);
       });
     </script>
