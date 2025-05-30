@@ -1,7 +1,7 @@
 // Team Members Data
 const teamMembers = [
     {
-        id: 3,
+        id: 1,
         name: "Ryan Christian Deniega",
         title: "Web Developer & UI Designer",
         image: "assets/img/Ryan.JPEG",
@@ -82,7 +82,17 @@ const teamMembers = [
                 preview: "assets/img/projects/paluwagan.jpg",
                 github: "https://github.com/SemiAutomat1c/paluwagan-system",
                 website: "https://paluwagan-system.vercel.app/"
-            }
+            },
+             {
+    title: "Text-to-Image Converter",
+    description: "A web-based tool that converts text or code into properly formatted images, specifically designed for creating cheat sheets and answer keys. The tool automatically arranges the content on A4 pages for easy printing and cutting.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    preview: "assets/img/projects/text2image.png",
+    github: "https://github.com/SemiAutomat1c/text-to-image-cheatsheet",
+    website: "https://text-to-image-cheatsheet.vercel.app/"
+}
+
+            
         ],
         contact: {
             email: "r.deniega.140107.tc@umindanao.edu.ph",
@@ -175,7 +185,7 @@ const teamMembers = [
         }
     },
     {
-        id: 1,
+        id: 3,
         name: "Jayvien Mocallay",
         title: "Cybersecurity Specialist & Programmer",
         image: "assets/img/jeb.jpg",
