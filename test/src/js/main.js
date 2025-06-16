@@ -71,9 +71,9 @@ const teamMembers = [
                 title: "Modern POS System",
                 description: "Built a sleek and modern POS system because who doesn't want to make checkout lines faster and cooler?",
                 technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-                preview: "assets/img/projects/pos.jpg",
+                preview: "assets/img/projects/POS.png",
                 github: "https://github.com/SemiAutomat1c/POS",
-                website: "https://pos-alpha-one.vercel.app/"
+                website: "https://gadgettrack.vercel.app/"
             },
             {
                 title: "Paluwagan Management System",
