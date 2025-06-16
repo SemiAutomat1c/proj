@@ -73,7 +73,7 @@ const teamMembers = [
                 technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
                 preview: "assets/img/projects/POS.png",
                 github: "https://github.com/SemiAutomat1c/POS",
-                website: "https://gadgettrack.vercel.app/"
+                website: "https://gadgettrack.vercel.app/"``
             },
             {
                 title: "Paluwagan Management System",
@@ -83,6 +83,15 @@ const teamMembers = [
                 github: "https://github.com/SemiAutomat1c/paluwagan-system",
                 website: "https://paluwagan-system.vercel.app/"
             },
+            {
+                title: "Portfolio Commission",
+                description: "Developed a dynamic portfolio commission website that showcases work, handles client inquiries, and offers a smooth user experience with animations — because every great portfolio deserves a great presentation.",
+                technologies: ["Next.js 14", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Nodemailer", "React Icons"],
+                preview: "assets/img/projects/Pillo.png",  
+                github: "https://github.com/SemiAutomat1c/VidEditPortfolioCommision",
+                website: "https://jayromepillo.vercel.app/"
+            },
+            
              {
     title: "Text-to-Image Converter",
     description: "A web-based tool that converts text or code into properly formatted images, specifically designed for creating cheat sheets and answer keys. The tool automatically arranges the content on A4 pages for easy printing and cutting.",
