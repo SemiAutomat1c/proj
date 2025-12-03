@@ -73,7 +73,7 @@ const teamMembers = [
                 technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
                 preview: "assets/img/projects/POS.png",
                 github: "https://github.com/SemiAutomat1c/POS",
-                website: "https://gadgettrack.vercel.app/"``
+                website: "https://gadgettrack.vercel.app/"
             },
             {
                 title: "Paluwagan Management System",
