@@ -374,12 +374,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle Loading Screen
     const loadingScreen = document.querySelector('.loading-screen');
     
-    // Immediately hide loading screen for debugging
+    // Simulate loading delay
     if (loadingScreen) {
-        loadingScreen.classList.add('hidden');
-        loadingScreen.style.display = 'none';
-    } else {
-        console.warn('Loading screen element not found');
+        setTimeout(() => {
+            loadingScreen.classList.add('hidden');
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        }, 1500);
     }
     
     // Get references to main elements
