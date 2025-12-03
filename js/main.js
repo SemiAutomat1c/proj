@@ -375,12 +375,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const loadingScreen = document.querySelector('.loading-screen');
     
     // Simulate loading delay (you can adjust this time as needed)
-    setTimeout(() => {
-        loadingScreen.classList.add('hidden');
+    if (loadingScreen) {
         setTimeout(() => {
-            loadingScreen.style.display = 'none';
-        }, 500); // Match this time with the CSS transition duration
-    }, 1500);
+            loadingScreen.classList.add('hidden');
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 500); // Match this time with the CSS transition duration
+        }, 1500);
+    } else {
+        console.warn('Loading screen element not found');
+    }
     
     // Get references to main elements
     const teamNav = document.getElementById('team-nav');
