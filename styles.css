@@ -1899,18 +1899,24 @@ footer p {
 }
 
 .loader {
-  position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.loader-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .loader-circle {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 120px;
   height: 120px;
   border: 4px solid rgba(155, 3, 3, 0.1);
@@ -1945,8 +1951,8 @@ footer p {
 }
 
 @keyframes spin {
-  0% { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 @keyframes pulse {
