@@ -374,14 +374,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle Loading Screen
     const loadingScreen = document.querySelector('.loading-screen');
     
-    // Simulate loading delay (you can adjust this time as needed)
+    // Immediately hide loading screen for debugging
     if (loadingScreen) {
-        setTimeout(() => {
-            loadingScreen.classList.add('hidden');
-            setTimeout(() => {
-                loadingScreen.style.display = 'none';
-            }, 500); // Match this time with the CSS transition duration
-        }, 1500);
+        loadingScreen.classList.add('hidden');
+        loadingScreen.style.display = 'none';
     } else {
         console.warn('Loading screen element not found');
     }
