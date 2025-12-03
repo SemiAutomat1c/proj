@@ -1,5 +1,14 @@
 {
-  "buildCommand": "true",
-  "devCommand": "python -m http.server 3000",
-  "outputDirectory": "test"
+  "builds": [
+    {
+      "src": "test/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/test/$1"
+    }
+  ]
 }
