@@ -1,14 +1,3 @@
 {
-  "builds": [
-    {
-      "src": "test/**",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/test/$1"
-    }
-  ]
+  "buildCommand": "true"
 }
